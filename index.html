@@ -63,26 +63,30 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section">
+    <section id="hero" class="hero section d-flex align-items-center" style="background-image: url('assets/img/hero/hero-bg.png'); background-repeat: no-repeat; background-size: cover; position: relative;">
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.4);"></div>
 
-      <div class="container">
-        <div class="d-flex justify-content-between">
-          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center flex-start" data-aos="fade-up">
-            <img src="assets/img/sri-krishna-nimbarka-sampradaya-tilak.png" class="img-fluid animated" alt="sri-krishna-nimbarka-sampradaya-tilak" style="width: 50px; height: 50px;background-size: cover;"/>
-            <p style="font-size: smaller;">श्री राधाकृष्णाभ्यां नमः <br/>
-            <span style="font-size:small">जगद्‌गुरु श्रीनिम्बार्काचार्यो विजयतेतराम्</span></p>
-            <h1 class="mt-2">श्री गोपाल सेवा केन्द्र (गोपालधाम)</h1>
-            <p style="font-size: 25px;">जगद्गुरु आश्रम</p>
-            <div class="d-flex">
-              <a href="#about" class="btn-get-started">Get Started</a>
-              <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+      <div class="container" style="position: relative; z-index: 1;">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up">
+            <div class="d-flex align-items-center mb-3 m-mt-5">
+              <img src="assets/img/hero/sri-krishna-nimbarka-sampradaya-tilak.png" alt="sri-krishna-nimbarka-sampradaya-tilak" style="width: 100px; height: auto; background-size: contain;" />
+              <p class="ms-3 mb-0" style="font-size: smaller;color:#FFE0B5">श्री राधाकृष्णाभ्यां नमः <br />
+                <span style="font-size: small;">जगद्‌गुरु श्रीनिम्बार्काचार्यो विजयतेतराम्</span>
+              </p>
+            </div>
+            <h1 class="display-4 fw-bold" style="color:#F6F0F0">श्री गोपाल सेवा केन्द्र (गोपालधाम)</h1>
+            <p class="lead fw-bold" style="color:#F6F0F0">जगद्गुरु आश्रम</p>
+            <p style="color:#F6F0F0">पोखरा महानगरपालिका वडा नं. १८, <br /> लक्ष्मीधारा, कास्की</p>
+            <div class="d-flex mt-4">
+              <a href="#get-started" class="btn d-me-3" style="background-color: #FFE0B5;">Get Started</a>
+              <a href="" class="btn align-items-center glightbox" style="background-color: #FFF2D7;">
+                <i class="bi bi-play-circle me-2"></i><span>Watch Video</span>
+              </a>
             </div>
           </div>
-          <div class="col-lg-6 order-1 order-lg-2 hero-img flex-end" data-aos="zoom-out" data-aos-delay="100">
-            <div class="d-flex justify-content-between">
-            <img src="assets/img/radheykrishna.jpg" class="img-fluid animated" alt="" style="width:350px; height:350px;"/>
-            <img src="assets/img/hero-img.jpg" class="img-fluid animated" alt="">
-          </div>
+          <div class="col-lg-6 d-flex justify-content-between" data-aos="zoom-out" data-aos-delay="100">
+              <img src="assets/img/hero/radheykrishna.png" class="img-fluid  d-me-3 m-mt-5 mw-80" alt="radhey krishna" />
           </div>
         </div>
       </div>
@@ -106,37 +110,7 @@
           </div>
 
           <div class="col-lg-5" data-aos="zoom-out" data-aos-delay="200">
-            <form action="forms/quote.php" method="post" class="php-email-form">
-              <h3>Get a quote</h3>
-              <p>Vel nobis odio laboriosam et hic voluptatem. Inventore vitae totam. Rerum repellendus enim linead sero park flows.</p>
-              <div class="row gy-3">
-
-                <div class="col-12">
-                  <input type="text" name="name" class="form-control" placeholder="Name" required="">
-                </div>
-
-                <div class="col-12 ">
-                  <input type="email" class="form-control" name="email" placeholder="Email" required="">
-                </div>
-
-                <div class="col-12">
-                  <input type="text" class="form-control" name="phone" placeholder="Phone" required="">
-                </div>
-
-                <div class="col-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                </div>
-
-                <div class="col-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your quote request has been sent successfully. Thank you!</div>
-
-                  <button type="submit">Get a quote</button>
-                </div>
-
-              </div>
-            </form>
+            <img src="assets/img/hero/hero-img.jpg" class="img-fluid rounded-circle" alt="" style="width: 350px; height: 350px;" />
           </div><!-- End Quote Form -->
 
         </div>
