@@ -937,6 +937,7 @@ section,
   margin-bottom: 25px;
   padding-bottom: 25px;
   position: relative;
+  line-height: 55px;
 }
 
 .get-started .content h3:after {
@@ -963,6 +964,11 @@ section,
 @media (max-width: 575px) {
   .get-started .php-email-form {
     padding: 20px;
+  }
+
+  .get-started .content h3 {
+    font-size: 25px;
+    line-height: 40px;
   }
 }
 
