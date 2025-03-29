@@ -339,24 +339,28 @@
           </div><!-- End Google Maps -->
 
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
+            <form class="contact-form php-email-form" action="https://api.web3forms.com/submit" method="POST" data-aos="fade-up" data-aos-delay="400">
+              <input type="hidden" name="access_key" value="8bd5f5ca-d4a9-4d0f-8ab4-e07ae4d74e18" />
+              <input type="hidden" name="subject" value="नयाँ भक्तजनबाट सन्देश" />
+              <input type="hidden" name="from_name" value="श्री गोपाल सेवा केन्द्र (गोपालधाम)" />
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name(Required)" required />
                 </div>
 
                 <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email(Required)" required />
                 </div>
 
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                  <input type="text" class="form-control" name="phone" placeholder="Your Phone(Optional)" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number"/>
                 </div>
 
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required ></textarea>
                 </div>
+                <input type="hidden" name="redirect" value="https://web3forms.com/success">
 
                 <div class="col-md-12 text-center">
                   <div class="loading">Loading</div>
