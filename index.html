@@ -339,10 +339,8 @@
           </div><!-- End Google Maps -->
 
           <div class="col-lg-6">
-            <form class="contact-form php-email-form" action="https://api.web3forms.com/submit" method="POST" data-aos="fade-up" data-aos-delay="400">
-              <input type="hidden" name="access_key" value="8bd5f5ca-d4a9-4d0f-8ab4-e07ae4d74e18" />
-              <input type="hidden" name="subject" value="नयाँ भक्तजनबाट सन्देश" />
-              <input type="hidden" name="from_name" value="श्री गोपाल सेवा केन्द्र (गोपालधाम)" />
+            <form class="php-email-form" onsubmit="handleFormSubmit(this); return false;"
+            role="form" data-aos="fade-up" data-aos-delay="400">
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -354,13 +352,12 @@
                 </div>
 
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="phone" placeholder="Your Phone(Optional)" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number"/>
+                  <input type="text" class="form-control" name="subject" placeholder="Subject(Required)" required/>
                 </div>
 
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required ></textarea>
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message(Required)" required ></textarea>
                 </div>
-                <input type="hidden" name="redirect" value="https://web3forms.com/success">
 
                 <div class="col-md-12 text-center">
                   <div class="loading">Loading</div>
@@ -500,6 +497,17 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    function handleFormSubmit(form) {
+        const name = encodeURIComponent(form.name.value);
+        const email = encodeURIComponent(form.email.value);
+        const message = encodeURIComponent(form.message.value);
+        const subject = encodeURIComponent(form.subject.value);
+        const body = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+        const mailtoLink = `mailto:gopaldhampokhara@gmail.com?subject=${subject}&body=${body}`;
+        window.location.href = mailtoLink;
+    }
+  </script>
 
 </body>
 

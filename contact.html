@@ -122,23 +122,24 @@
           </div><!-- End Google Maps -->
 
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
+            <form class="php-email-form" onsubmit="handleFormSubmit(this); return false;"
+            role="form" data-aos="fade-up" data-aos-delay="400">
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name(Required)" required />
                 </div>
 
                 <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email(Required)" required />
                 </div>
 
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject(Required)" required/>
                 </div>
 
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message(Required)" required ></textarea>
                 </div>
 
                 <div class="col-md-12 text-center">
@@ -278,7 +279,18 @@
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
 
   <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
+  <script>
+    function handleFormSubmit(form) {
+        const name = encodeURIComponent(form.name.value);
+        const email = encodeURIComponent(form.email.value);
+        const message = encodeURIComponent(form.message.value);
+        const subject = encodeURIComponent(form.subject.value);
+        const body = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+        const mailtoLink = `mailto:gopaldhampokhara@gmail.com?subject=${subject}&body=${body}`;
+        window.location.href = mailtoLink;
+    }
+  </script>
 
 </body>
 
