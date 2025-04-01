@@ -512,6 +512,25 @@
 
   </footer>
 
+  <!-- Modal Popup -->
+<div class="modal fade" id="welcomeModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">हार्दिक निमन्त्रणा</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="assets/img/invitation.png" alt="हार्दिक निमन्त्रणा" class="img-fluid my-3">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <a href="pranpratishtha.html" class="btn btn-primary" style="background-color: var(--accent-color);color:white">पूरा विवरण <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -569,6 +588,20 @@
       }
     }, 1000);
   </script>
+
+<script>
+  // Check if this is the user's first visit
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!localStorage.getItem('visitedBefore')) {
+      // Set flag in localStorage
+      localStorage.setItem('visitedBefore', 'true');
+      
+      // Show modal after page loads
+      const welcomeModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
+      welcomeModal.show();
+    }
+  });
+</script>
   
 
 </body>
